@@ -5,8 +5,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/kaspanet/kaspad/domain/dagconfig"
-	"github.com/kaspanet/kaspad/infrastructure/config"
+	"github.com/sedraxnet/sedrax/domain/dagconfig"
+	"github.com/sedraxnet/sedrax/infrastructure/config"
 )
 
 const (

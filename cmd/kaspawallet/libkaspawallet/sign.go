@@ -1,13 +1,13 @@
 package libkaspawallet
 
 import (
-	"github.com/kaspanet/kaspad/cmd/kaspawallet/libkaspawallet/bip32"
-	"github.com/kaspanet/kaspad/cmd/kaspawallet/libkaspawallet/serialization"
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/consensushashing"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/txscript"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/utxo"
-	"github.com/kaspanet/kaspad/domain/dagconfig"
+	"github.com/sedraxnet/sedrax/cmd/kaspawallet/libkaspawallet/bip32"
+	"github.com/sedraxnet/sedrax/cmd/kaspawallet/libkaspawallet/serialization"
+	"github.com/sedraxnet/sedrax/domain/consensus/model/externalapi"
+	"github.com/sedraxnet/sedrax/domain/consensus/utils/consensushashing"
+	"github.com/sedraxnet/sedrax/domain/consensus/utils/txscript"
+	"github.com/sedraxnet/sedrax/domain/consensus/utils/utxo"
+	"github.com/sedraxnet/sedrax/domain/dagconfig"
 	"github.com/pkg/errors"
 )
 

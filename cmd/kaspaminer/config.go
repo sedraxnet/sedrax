@@ -7,13 +7,13 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/kaspanet/kaspad/infrastructure/config"
+	"github.com/sedraxnet/sedrax/infrastructure/config"
 
-	"github.com/kaspanet/kaspad/util"
+	"github.com/sedraxnet/sedrax/util"
 	"github.com/pkg/errors"
 
 	"github.com/jessevdk/go-flags"
-	"github.com/kaspanet/kaspad/version"
+	"github.com/sedraxnet/sedrax/version"
 )
 
 const (

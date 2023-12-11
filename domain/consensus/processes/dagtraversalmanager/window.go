@@ -1,9 +1,9 @@
 package dagtraversalmanager
 
 import (
-	"github.com/kaspanet/kaspad/domain/consensus/model"
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
-	"github.com/kaspanet/kaspad/infrastructure/db/database"
+	"github.com/sedraxnet/sedrax/domain/consensus/model"
+	"github.com/sedraxnet/sedrax/domain/consensus/model/externalapi"
+	"github.com/sedraxnet/sedrax/infrastructure/db/database"
 )
 
 func (dtm *dagTraversalManager) DAABlockWindow(stagingArea *model.StagingArea, highHash *externalapi.DomainHash) ([]*externalapi.DomainHash, error) {

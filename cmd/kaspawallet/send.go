@@ -6,11 +6,11 @@ import (
 	"os"
 	"strings"
 
-	"github.com/kaspanet/kaspad/cmd/kaspawallet/daemon/client"
-	"github.com/kaspanet/kaspad/cmd/kaspawallet/daemon/pb"
-	"github.com/kaspanet/kaspad/cmd/kaspawallet/keys"
-	"github.com/kaspanet/kaspad/cmd/kaspawallet/libkaspawallet"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/constants"
+	"github.com/sedraxnet/sedrax/cmd/kaspawallet/daemon/client"
+	"github.com/sedraxnet/sedrax/cmd/kaspawallet/daemon/pb"
+	"github.com/sedraxnet/sedrax/cmd/kaspawallet/keys"
+	"github.com/sedraxnet/sedrax/cmd/kaspawallet/libkaspawallet"
+	"github.com/sedraxnet/sedrax/domain/consensus/utils/constants"
 	"github.com/pkg/errors"
 )
 

@@ -3,12 +3,12 @@ package consensushashing
 import (
 	"io"
 
-	"github.com/kaspanet/kaspad/domain/consensus/utils/serialization"
+	"github.com/sedraxnet/sedrax/domain/consensus/utils/serialization"
 
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/hashes"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/transactionhelper"
-	"github.com/kaspanet/kaspad/util/binaryserializer"
+	"github.com/sedraxnet/sedrax/domain/consensus/model/externalapi"
+	"github.com/sedraxnet/sedrax/domain/consensus/utils/hashes"
+	"github.com/sedraxnet/sedrax/domain/consensus/utils/transactionhelper"
+	"github.com/sedraxnet/sedrax/util/binaryserializer"
 	"github.com/pkg/errors"
 )
 

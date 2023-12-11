@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	"github.com/kaspanet/kaspad/infrastructure/logger"
-	"github.com/kaspanet/kaspad/util/panics"
+	"github.com/sedraxnet/sedrax/infrastructure/logger"
+	"github.com/sedraxnet/sedrax/util/panics"
 	"os"
 )
 

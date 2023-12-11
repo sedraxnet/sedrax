@@ -1,16 +1,16 @@
 package transactionrelay
 
 import (
-	"github.com/kaspanet/kaspad/app/appmessage"
-	"github.com/kaspanet/kaspad/app/protocol/common"
-	"github.com/kaspanet/kaspad/app/protocol/flowcontext"
-	"github.com/kaspanet/kaspad/app/protocol/protocolerrors"
-	"github.com/kaspanet/kaspad/domain"
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/consensushashing"
-	"github.com/kaspanet/kaspad/domain/miningmanager/mempool"
-	"github.com/kaspanet/kaspad/infrastructure/network/netadapter"
-	"github.com/kaspanet/kaspad/infrastructure/network/netadapter/router"
+	"github.com/sedraxnet/sedrax/app/appmessage"
+	"github.com/sedraxnet/sedrax/app/protocol/common"
+	"github.com/sedraxnet/sedrax/app/protocol/flowcontext"
+	"github.com/sedraxnet/sedrax/app/protocol/protocolerrors"
+	"github.com/sedraxnet/sedrax/domain"
+	"github.com/sedraxnet/sedrax/domain/consensus/model/externalapi"
+	"github.com/sedraxnet/sedrax/domain/consensus/utils/consensushashing"
+	"github.com/sedraxnet/sedrax/domain/miningmanager/mempool"
+	"github.com/sedraxnet/sedrax/infrastructure/network/netadapter"
+	"github.com/sedraxnet/sedrax/infrastructure/network/netadapter/router"
 	"github.com/pkg/errors"
 )
 

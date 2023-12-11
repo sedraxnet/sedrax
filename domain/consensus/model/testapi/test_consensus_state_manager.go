@@ -1,8 +1,8 @@
 package testapi
 
 import (
-	"github.com/kaspanet/kaspad/domain/consensus/model"
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
+	"github.com/sedraxnet/sedrax/domain/consensus/model"
+	"github.com/sedraxnet/sedrax/domain/consensus/model/externalapi"
 )
 
 // TestConsensusStateManager  adds to the main ConsensusStateManager methods required by tests

@@ -1,12 +1,12 @@
 package rpchandlers
 
 import (
-	"github.com/kaspanet/kaspad/app/appmessage"
-	"github.com/kaspanet/kaspad/app/rpc/rpccontext"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/txscript"
+	"github.com/sedraxnet/sedrax/app/appmessage"
+	"github.com/sedraxnet/sedrax/app/rpc/rpccontext"
+	"github.com/sedraxnet/sedrax/domain/consensus/utils/txscript"
 
-	"github.com/kaspanet/kaspad/infrastructure/network/netadapter/router"
-	"github.com/kaspanet/kaspad/util"
+	"github.com/sedraxnet/sedrax/infrastructure/network/netadapter/router"
+	"github.com/sedraxnet/sedrax/util"
 )
 
 // HandleGetMempoolEntriesByAddresses handles the respectively named RPC command

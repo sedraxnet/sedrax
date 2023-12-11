@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/kaspanet/kaspad/stability-tests/common"
-	"github.com/kaspanet/kaspad/util/profiling"
+	"github.com/sedraxnet/sedrax/stability-tests/common"
+	"github.com/sedraxnet/sedrax/util/profiling"
 )
 
 func main() {

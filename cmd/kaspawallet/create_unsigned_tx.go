@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/kaspanet/kaspad/cmd/kaspawallet/daemon/client"
-	"github.com/kaspanet/kaspad/cmd/kaspawallet/daemon/pb"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/constants"
+	"github.com/sedraxnet/sedrax/cmd/kaspawallet/daemon/client"
+	"github.com/sedraxnet/sedrax/cmd/kaspawallet/daemon/pb"
+	"github.com/sedraxnet/sedrax/domain/consensus/utils/constants"
 )
 
 func createUnsignedTransaction(conf *createUnsignedTransactionConfig) error {

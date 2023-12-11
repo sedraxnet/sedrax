@@ -2,18 +2,18 @@ package main
 
 import (
 	nativeerrors "errors"
-	"github.com/kaspanet/kaspad/version"
+	"github.com/sedraxnet/sedrax/version"
 	"math/rand"
 	"sync/atomic"
 	"time"
 
-	"github.com/kaspanet/kaspad/app/appmessage"
-	"github.com/kaspanet/kaspad/cmd/kaspaminer/templatemanager"
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/consensushashing"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/pow"
-	"github.com/kaspanet/kaspad/infrastructure/network/netadapter/router"
-	"github.com/kaspanet/kaspad/util"
+	"github.com/sedraxnet/sedrax/app/appmessage"
+	"github.com/sedraxnet/sedrax/cmd/kaspaminer/templatemanager"
+	"github.com/sedraxnet/sedrax/domain/consensus/model/externalapi"
+	"github.com/sedraxnet/sedrax/domain/consensus/utils/consensushashing"
+	"github.com/sedraxnet/sedrax/domain/consensus/utils/pow"
+	"github.com/sedraxnet/sedrax/infrastructure/network/netadapter/router"
+	"github.com/sedraxnet/sedrax/util"
 	"github.com/pkg/errors"
 )
 

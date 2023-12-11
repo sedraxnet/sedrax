@@ -1,9 +1,9 @@
 package protowire
 
 import (
-	"github.com/kaspanet/kaspad/app/appmessage"
-	"github.com/kaspanet/kaspad/infrastructure/network/netadapter/id"
-	"github.com/kaspanet/kaspad/util/mstime"
+	"github.com/sedraxnet/sedrax/app/appmessage"
+	"github.com/sedraxnet/sedrax/infrastructure/network/netadapter/id"
+	"github.com/sedraxnet/sedrax/util/mstime"
 	"github.com/pkg/errors"
 )
 

@@ -1,17 +1,17 @@
 package rpc
 
 import (
-	"github.com/kaspanet/kaspad/app/appmessage"
-	"github.com/kaspanet/kaspad/app/protocol"
-	"github.com/kaspanet/kaspad/app/rpc/rpccontext"
-	"github.com/kaspanet/kaspad/domain"
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
-	"github.com/kaspanet/kaspad/domain/utxoindex"
-	"github.com/kaspanet/kaspad/infrastructure/config"
-	"github.com/kaspanet/kaspad/infrastructure/logger"
-	"github.com/kaspanet/kaspad/infrastructure/network/addressmanager"
-	"github.com/kaspanet/kaspad/infrastructure/network/connmanager"
-	"github.com/kaspanet/kaspad/infrastructure/network/netadapter"
+	"github.com/sedraxnet/sedrax/app/appmessage"
+	"github.com/sedraxnet/sedrax/app/protocol"
+	"github.com/sedraxnet/sedrax/app/rpc/rpccontext"
+	"github.com/sedraxnet/sedrax/domain"
+	"github.com/sedraxnet/sedrax/domain/consensus/model/externalapi"
+	"github.com/sedraxnet/sedrax/domain/utxoindex"
+	"github.com/sedraxnet/sedrax/infrastructure/config"
+	"github.com/sedraxnet/sedrax/infrastructure/logger"
+	"github.com/sedraxnet/sedrax/infrastructure/network/addressmanager"
+	"github.com/sedraxnet/sedrax/infrastructure/network/connmanager"
+	"github.com/sedraxnet/sedrax/infrastructure/network/netadapter"
 	"github.com/pkg/errors"
 )
 

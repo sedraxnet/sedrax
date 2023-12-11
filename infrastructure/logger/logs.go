@@ -35,7 +35,7 @@ package logger
 import (
 	"bytes"
 	"fmt"
-	"github.com/kaspanet/kaspad/util/mstime"
+	"github.com/sedraxnet/sedrax/util/mstime"
 	"os"
 	"runtime"
 	"sync/atomic"

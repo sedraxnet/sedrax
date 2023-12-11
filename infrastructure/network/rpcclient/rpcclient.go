@@ -4,12 +4,12 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/kaspanet/kaspad/app/appmessage"
-	"github.com/kaspanet/kaspad/infrastructure/logger"
-	routerpkg "github.com/kaspanet/kaspad/infrastructure/network/netadapter/router"
-	"github.com/kaspanet/kaspad/infrastructure/network/rpcclient/grpcclient"
-	"github.com/kaspanet/kaspad/util/panics"
-	"github.com/kaspanet/kaspad/version"
+	"github.com/sedraxnet/sedrax/app/appmessage"
+	"github.com/sedraxnet/sedrax/infrastructure/logger"
+	routerpkg "github.com/sedraxnet/sedrax/infrastructure/network/netadapter/router"
+	"github.com/sedraxnet/sedrax/infrastructure/network/rpcclient/grpcclient"
+	"github.com/sedraxnet/sedrax/util/panics"
+	"github.com/sedraxnet/sedrax/version"
 	"github.com/pkg/errors"
 )
 

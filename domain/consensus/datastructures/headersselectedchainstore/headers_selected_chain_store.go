@@ -2,14 +2,14 @@ package headersselectedchainstore
 
 import (
 	"encoding/binary"
-	"github.com/kaspanet/kaspad/util/staging"
+	"github.com/sedraxnet/sedrax/util/staging"
 
-	"github.com/kaspanet/kaspad/domain/consensus/database"
-	"github.com/kaspanet/kaspad/domain/consensus/database/binaryserialization"
-	"github.com/kaspanet/kaspad/domain/consensus/model"
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/lrucache"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/lrucacheuint64tohash"
+	"github.com/sedraxnet/sedrax/domain/consensus/database"
+	"github.com/sedraxnet/sedrax/domain/consensus/database/binaryserialization"
+	"github.com/sedraxnet/sedrax/domain/consensus/model"
+	"github.com/sedraxnet/sedrax/domain/consensus/model/externalapi"
+	"github.com/sedraxnet/sedrax/domain/consensus/utils/lrucache"
+	"github.com/sedraxnet/sedrax/domain/consensus/utils/lrucacheuint64tohash"
 	"github.com/pkg/errors"
 )
 

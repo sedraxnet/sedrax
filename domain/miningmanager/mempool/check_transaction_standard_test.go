@@ -9,17 +9,17 @@ import (
 	"math"
 	"testing"
 
-	"github.com/kaspanet/kaspad/domain/consensusreference"
+	"github.com/sedraxnet/sedrax/domain/consensusreference"
 
-	"github.com/kaspanet/kaspad/domain/consensus/utils/testutils"
+	"github.com/sedraxnet/sedrax/domain/consensus/utils/testutils"
 
-	"github.com/kaspanet/kaspad/domain/consensus"
+	"github.com/sedraxnet/sedrax/domain/consensus"
 
-	"github.com/kaspanet/kaspad/domain/consensus/utils/constants"
+	"github.com/sedraxnet/sedrax/domain/consensus/utils/constants"
 
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/txscript"
-	"github.com/kaspanet/kaspad/util"
+	"github.com/sedraxnet/sedrax/domain/consensus/model/externalapi"
+	"github.com/sedraxnet/sedrax/domain/consensus/utils/txscript"
+	"github.com/sedraxnet/sedrax/util"
 	"github.com/pkg/errors"
 )
 

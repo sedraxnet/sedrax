@@ -1,16 +1,16 @@
 package ping
 
 import (
-	"github.com/kaspanet/kaspad/app/protocol/common"
-	"github.com/kaspanet/kaspad/app/protocol/flowcontext"
+	"github.com/sedraxnet/sedrax/app/protocol/common"
+	"github.com/sedraxnet/sedrax/app/protocol/flowcontext"
 	"github.com/pkg/errors"
 	"time"
 
-	"github.com/kaspanet/kaspad/app/appmessage"
-	peerpkg "github.com/kaspanet/kaspad/app/protocol/peer"
-	"github.com/kaspanet/kaspad/app/protocol/protocolerrors"
-	"github.com/kaspanet/kaspad/infrastructure/network/netadapter/router"
-	"github.com/kaspanet/kaspad/util/random"
+	"github.com/sedraxnet/sedrax/app/appmessage"
+	peerpkg "github.com/sedraxnet/sedrax/app/protocol/peer"
+	"github.com/sedraxnet/sedrax/app/protocol/protocolerrors"
+	"github.com/sedraxnet/sedrax/infrastructure/network/netadapter/router"
+	"github.com/sedraxnet/sedrax/util/random"
 )
 
 // SendPingsContext is the interface for the context needed for the SendPings flow.

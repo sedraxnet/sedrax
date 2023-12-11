@@ -3,7 +3,7 @@ package serialization
 import (
 	"math"
 
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
+	"github.com/sedraxnet/sedrax/domain/consensus/model/externalapi"
 	"github.com/pkg/errors"
 )
 

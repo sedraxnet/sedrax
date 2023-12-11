@@ -1,10 +1,10 @@
 package fast_pruning_ibd_test
 
 import (
-	"github.com/kaspanet/kaspad/domain/consensus"
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/testutils"
-	"github.com/kaspanet/kaspad/domain/dagconfig"
+	"github.com/sedraxnet/sedrax/domain/consensus"
+	"github.com/sedraxnet/sedrax/domain/consensus/model/externalapi"
+	"github.com/sedraxnet/sedrax/domain/consensus/utils/testutils"
+	"github.com/sedraxnet/sedrax/domain/dagconfig"
 	"io/ioutil"
 	"os"
 	"path"

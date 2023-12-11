@@ -1,12 +1,12 @@
 package blockvalidator
 
 import (
-	"github.com/kaspanet/kaspad/domain/consensus/model"
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
-	"github.com/kaspanet/kaspad/domain/consensus/ruleerrors"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/transactionhelper"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/virtual"
-	"github.com/kaspanet/kaspad/infrastructure/logger"
+	"github.com/sedraxnet/sedrax/domain/consensus/model"
+	"github.com/sedraxnet/sedrax/domain/consensus/model/externalapi"
+	"github.com/sedraxnet/sedrax/domain/consensus/ruleerrors"
+	"github.com/sedraxnet/sedrax/domain/consensus/utils/transactionhelper"
+	"github.com/sedraxnet/sedrax/domain/consensus/utils/virtual"
+	"github.com/sedraxnet/sedrax/infrastructure/logger"
 	"github.com/pkg/errors"
 )
 

@@ -3,10 +3,10 @@ package rpc
 import (
 	"time"
 
-	"github.com/kaspanet/kaspad/app/appmessage"
-	"github.com/kaspanet/kaspad/infrastructure/network/rpcclient"
+	"github.com/sedraxnet/sedrax/app/appmessage"
+	"github.com/sedraxnet/sedrax/infrastructure/network/rpcclient"
 
-	"github.com/kaspanet/kaspad/domain/dagconfig"
+	"github.com/sedraxnet/sedrax/domain/dagconfig"
 )
 
 const defaultRPCServer = "localhost"

@@ -1,11 +1,11 @@
 package flowcontext
 
 import (
-	"github.com/kaspanet/kaspad/app/appmessage"
-	"github.com/kaspanet/kaspad/app/protocol/common"
-	peerpkg "github.com/kaspanet/kaspad/app/protocol/peer"
-	"github.com/kaspanet/kaspad/infrastructure/network/connmanager"
-	"github.com/kaspanet/kaspad/infrastructure/network/netadapter"
+	"github.com/sedraxnet/sedrax/app/appmessage"
+	"github.com/sedraxnet/sedrax/app/protocol/common"
+	peerpkg "github.com/sedraxnet/sedrax/app/protocol/peer"
+	"github.com/sedraxnet/sedrax/infrastructure/network/connmanager"
+	"github.com/sedraxnet/sedrax/infrastructure/network/netadapter"
 	"github.com/pkg/errors"
 )
 

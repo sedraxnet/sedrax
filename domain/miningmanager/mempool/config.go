@@ -3,11 +3,11 @@ package mempool
 import (
 	"time"
 
-	"github.com/kaspanet/kaspad/domain/consensus/utils/constants"
+	"github.com/sedraxnet/sedrax/domain/consensus/utils/constants"
 
-	"github.com/kaspanet/kaspad/util"
+	"github.com/sedraxnet/sedrax/util"
 
-	"github.com/kaspanet/kaspad/domain/dagconfig"
+	"github.com/sedraxnet/sedrax/domain/dagconfig"
 )
 
 const (

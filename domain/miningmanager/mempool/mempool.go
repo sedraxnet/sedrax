@@ -1,14 +1,14 @@
 package mempool
 
 import (
-	"github.com/kaspanet/kaspad/domain/consensus/utils/consensushashing"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/constants"
+	"github.com/sedraxnet/sedrax/domain/consensus/utils/consensushashing"
+	"github.com/sedraxnet/sedrax/domain/consensus/utils/constants"
 	"sync"
 
-	"github.com/kaspanet/kaspad/domain/consensusreference"
+	"github.com/sedraxnet/sedrax/domain/consensusreference"
 
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
-	miningmanagermodel "github.com/kaspanet/kaspad/domain/miningmanager/model"
+	"github.com/sedraxnet/sedrax/domain/consensus/model/externalapi"
+	miningmanagermodel "github.com/sedraxnet/sedrax/domain/miningmanager/model"
 )
 
 type mempool struct {

@@ -1,8 +1,8 @@
 package virtual
 
 import (
-	"github.com/kaspanet/kaspad/domain/consensus/model"
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
+	"github.com/sedraxnet/sedrax/domain/consensus/model"
+	"github.com/sedraxnet/sedrax/domain/consensus/model/externalapi"
 )
 
 // ContainsOnlyVirtualGenesis returns whether the given block hashes contain only the virtual

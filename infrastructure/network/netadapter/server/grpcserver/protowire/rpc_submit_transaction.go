@@ -3,7 +3,7 @@ package protowire
 import (
 	"math"
 
-	"github.com/kaspanet/kaspad/app/appmessage"
+	"github.com/sedraxnet/sedrax/app/appmessage"
 	"github.com/pkg/errors"
 )
 

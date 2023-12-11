@@ -1,8 +1,8 @@
 package database
 
 import (
-	"github.com/kaspanet/kaspad/domain/consensus/model"
-	"github.com/kaspanet/kaspad/infrastructure/db/database"
+	"github.com/sedraxnet/sedrax/domain/consensus/model"
+	"github.com/sedraxnet/sedrax/infrastructure/db/database"
 )
 
 func dbBucketToDatabaseBucket(bucket model.DBBucket) *database.Bucket {

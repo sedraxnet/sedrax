@@ -12,10 +12,10 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/kaspanet/kaspad/cmd/kaspawallet/utils"
+	"github.com/sedraxnet/sedrax/cmd/kaspawallet/utils"
 
-	"github.com/kaspanet/kaspad/domain/dagconfig"
-	"github.com/kaspanet/kaspad/util"
+	"github.com/sedraxnet/sedrax/domain/dagconfig"
+	"github.com/sedraxnet/sedrax/util"
 	"github.com/pkg/errors"
 	"golang.org/x/crypto/argon2"
 	"golang.org/x/crypto/chacha20poly1305"

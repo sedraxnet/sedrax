@@ -4,7 +4,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/kaspanet/kaspad/infrastructure/db/database"
+	"github.com/sedraxnet/sedrax/infrastructure/db/database"
 )
 
 func TestTransactionCloseErrors(t *testing.T) {

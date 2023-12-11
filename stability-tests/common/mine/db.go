@@ -3,9 +3,9 @@ package mine
 import (
 	"path/filepath"
 
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
-	"github.com/kaspanet/kaspad/infrastructure/db/database"
-	"github.com/kaspanet/kaspad/infrastructure/db/database/ldb"
+	"github.com/sedraxnet/sedrax/domain/consensus/model/externalapi"
+	"github.com/sedraxnet/sedrax/infrastructure/db/database"
+	"github.com/sedraxnet/sedrax/infrastructure/db/database/ldb"
 )
 
 const leveldbCacheSizeMiB = 256

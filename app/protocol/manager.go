@@ -5,20 +5,20 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"github.com/kaspanet/kaspad/app/protocol/common"
+	"github.com/sedraxnet/sedrax/app/protocol/common"
 
 	"github.com/pkg/errors"
 
-	"github.com/kaspanet/kaspad/domain"
+	"github.com/sedraxnet/sedrax/domain"
 
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
+	"github.com/sedraxnet/sedrax/domain/consensus/model/externalapi"
 
-	"github.com/kaspanet/kaspad/app/protocol/flowcontext"
-	peerpkg "github.com/kaspanet/kaspad/app/protocol/peer"
-	"github.com/kaspanet/kaspad/infrastructure/config"
-	"github.com/kaspanet/kaspad/infrastructure/network/addressmanager"
-	"github.com/kaspanet/kaspad/infrastructure/network/connmanager"
-	"github.com/kaspanet/kaspad/infrastructure/network/netadapter"
+	"github.com/sedraxnet/sedrax/app/protocol/flowcontext"
+	peerpkg "github.com/sedraxnet/sedrax/app/protocol/peer"
+	"github.com/sedraxnet/sedrax/infrastructure/config"
+	"github.com/sedraxnet/sedrax/infrastructure/network/addressmanager"
+	"github.com/sedraxnet/sedrax/infrastructure/network/connmanager"
+	"github.com/sedraxnet/sedrax/infrastructure/network/netadapter"
 )
 
 // Manager manages the p2p protocol

@@ -7,17 +7,17 @@ import (
 	"runtime"
 	"time"
 
-	"github.com/kaspanet/kaspad/infrastructure/config"
-	"github.com/kaspanet/kaspad/infrastructure/db/database"
-	"github.com/kaspanet/kaspad/infrastructure/db/database/ldb"
-	"github.com/kaspanet/kaspad/infrastructure/logger"
-	"github.com/kaspanet/kaspad/infrastructure/os/execenv"
-	"github.com/kaspanet/kaspad/infrastructure/os/limits"
-	"github.com/kaspanet/kaspad/infrastructure/os/signal"
-	"github.com/kaspanet/kaspad/infrastructure/os/winservice"
-	"github.com/kaspanet/kaspad/util/panics"
-	"github.com/kaspanet/kaspad/util/profiling"
-	"github.com/kaspanet/kaspad/version"
+	"github.com/sedraxnet/sedrax/infrastructure/config"
+	"github.com/sedraxnet/sedrax/infrastructure/db/database"
+	"github.com/sedraxnet/sedrax/infrastructure/db/database/ldb"
+	"github.com/sedraxnet/sedrax/infrastructure/logger"
+	"github.com/sedraxnet/sedrax/infrastructure/os/execenv"
+	"github.com/sedraxnet/sedrax/infrastructure/os/limits"
+	"github.com/sedraxnet/sedrax/infrastructure/os/signal"
+	"github.com/sedraxnet/sedrax/infrastructure/os/winservice"
+	"github.com/sedraxnet/sedrax/util/panics"
+	"github.com/sedraxnet/sedrax/util/profiling"
+	"github.com/sedraxnet/sedrax/version"
 )
 
 const (

@@ -1,10 +1,10 @@
 package reachabilitymanager
 
 import (
-	"github.com/kaspanet/kaspad/domain/consensus/database"
-	"github.com/kaspanet/kaspad/domain/consensus/model"
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/reachabilitydata"
+	"github.com/sedraxnet/sedrax/domain/consensus/database"
+	"github.com/sedraxnet/sedrax/domain/consensus/model"
+	"github.com/sedraxnet/sedrax/domain/consensus/model/externalapi"
+	"github.com/sedraxnet/sedrax/domain/consensus/utils/reachabilitydata"
 	"github.com/pkg/errors"
 )
 
