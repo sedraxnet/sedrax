@@ -21,7 +21,7 @@ kaspad.db
 # Real binaries, build with `go build .`
 kaspad
 cmd/gencerts/gencerts
-cmd/kaspactl/kaspactl
+cmd/sedraxctl/sedraxctl
 cmd/kasminer/kaspaminer
 *.exe
 *.exe~

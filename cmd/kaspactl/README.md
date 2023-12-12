@@ -1,6 +1,6 @@
-# kaspactl
+# sedraxctl
 
-kaspactl is an RPC client for kaspad
+sedraxctl is an RPC client for kaspad
 
 ## Requirements
 
@@ -23,7 +23,7 @@ $ go version
 
 ```bash
 $ git clone https://github.com/sedraxnet/sedrax
-$ cd kaspad/cmd/kaspactl
+$ cd kaspad/cmd/sedraxctl
 $ go install .
 ```
 
@@ -41,13 +41,13 @@ $ kaspctl --help
 But the minimum configuration needed to run it is:
 
 ```bash
-$ kaspactl <REQUEST_JSON>
+$ sedraxctl <REQUEST_JSON>
 ```
 
 For example:
 
 ```
-$ kaspactl '{"getBlockDagInfoRequest":{}}'
+$ sedraxctl '{"getBlockDagInfoRequest":{}}'
 ```
 
 For a list of all available requests check out the [RPC documentation](infrastructure/network/netadapter/server/grpcserver/protowire/rpc.md)
