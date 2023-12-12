@@ -5,12 +5,12 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/sedraxnet/sedrax/cmd/kaspawallet/libkaspawallet"
-	"github.com/sedraxnet/sedrax/cmd/kaspawallet/libkaspawallet/bip32"
-	"github.com/sedraxnet/sedrax/cmd/kaspawallet/utils"
+	"github.com/sedraxnet/sedrax/cmd/sedraxwallet/libsedraxwallet"
+	"github.com/sedraxnet/sedrax/cmd/sedraxwallet/libsedraxwallet/bip32"
+	"github.com/sedraxnet/sedrax/cmd/sedraxwallet/utils"
 	"github.com/pkg/errors"
 
-	"github.com/sedraxnet/sedrax/cmd/kaspawallet/keys"
+	"github.com/sedraxnet/sedrax/cmd/sedraxwallet/keys"
 )
 
 func create(conf *createConfig) error {
@@ -32,8 +32,8 @@ func create(conf *createConfig) error {
 	}
 
 	fmt.Printf("Notice the above is neither a secret key to your wallet " +
-		"(use \"kaspawallet dump-unencrypted-data\" to see a secret seed phrase) " +
-		"nor a wallet public address (use \"kaspawallet new-address\" to create and see one)\n\n")
+		"(use \"sedraxwallet dump-unencrypted-data\" to see a secret seed phrase) " +
+		"nor a wallet public address (use \"sedraxwallet new-address\" to create and see one)\n\n")
 
 	extendedPublicKeys := make([]string, conf.NumPrivateKeys, conf.NumPublicKeys)
 	copy(extendedPublicKeys, signerExtendedPublicKeys)
@@ -58,7 +58,7 @@ func create(conf *createConfig) error {
 	// For a read only wallet the cosigner index is 0
 	cosignerIndex := uint32(0)
 	if len(signerExtendedPublicKeys) > 0 {
-		cosignerIndex, err = libkaspawallet.MinimumCosignerIndex(signerExtendedPublicKeys, extendedPublicKeys)
+		cosignerIndex, err = libsedraxwallet.MinimumCosignerIndex(signerExtendedPublicKeys, extendedPublicKeys)
 		if err != nil {
 			return err
 		}

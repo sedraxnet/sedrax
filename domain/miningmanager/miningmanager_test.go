@@ -1,7 +1,7 @@
 package miningmanager_test
 
 import (
-	"github.com/sedraxnet/sedrax/cmd/kaspawallet/libkaspawallet"
+	"github.com/sedraxnet/sedrax/cmd/sedraxwallet/libsedraxwallet"
 	"github.com/sedraxnet/sedrax/domain/consensusreference"
 	"github.com/sedraxnet/sedrax/domain/miningmanager/model"
 	"github.com/sedraxnet/sedrax/util"
@@ -819,7 +819,7 @@ func generateNewCoinbase(addressPrefix util.Bech32Prefix, op opType) (*externala
 			ExtraData:       nil,
 		}, nil
 	}
-	_, publicKey, err := libkaspawallet.CreateKeyPair(op == opECDSA)
+	_, publicKey, err := libsedraxwallet.CreateKeyPair(op == opECDSA)
 	if err != nil {
 		return nil, err
 	}

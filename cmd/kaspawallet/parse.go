@@ -3,7 +3,7 @@ package main
 import (
 	"encoding/hex"
 	"fmt"
-	"github.com/sedraxnet/sedrax/cmd/kaspawallet/libkaspawallet/serialization"
+	"github.com/sedraxnet/sedrax/cmd/sedraxwallet/libsedraxwallet/serialization"
 	"github.com/sedraxnet/sedrax/domain/consensus/utils/consensushashing"
 	"github.com/sedraxnet/sedrax/domain/consensus/utils/constants"
 	"github.com/sedraxnet/sedrax/domain/consensus/utils/txscript"

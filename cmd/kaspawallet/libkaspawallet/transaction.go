@@ -1,8 +1,8 @@
-package libkaspawallet
+package libsedraxwallet
 
 import (
-	"github.com/sedraxnet/sedrax/cmd/kaspawallet/libkaspawallet/bip32"
-	"github.com/sedraxnet/sedrax/cmd/kaspawallet/libkaspawallet/serialization"
+	"github.com/sedraxnet/sedrax/cmd/sedraxwallet/libsedraxwallet/bip32"
+	"github.com/sedraxnet/sedrax/cmd/sedraxwallet/libsedraxwallet/serialization"
 	"github.com/sedraxnet/sedrax/domain/consensus/model/externalapi"
 	"github.com/sedraxnet/sedrax/domain/consensus/utils/constants"
 	"github.com/sedraxnet/sedrax/domain/consensus/utils/subnetworks"

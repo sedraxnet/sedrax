@@ -13,8 +13,8 @@ import (
 
 	"github.com/sedraxnet/sedrax/util/profiling"
 
-	"github.com/sedraxnet/sedrax/cmd/kaspawallet/daemon/pb"
-	"github.com/sedraxnet/sedrax/cmd/kaspawallet/keys"
+	"github.com/sedraxnet/sedrax/cmd/sedraxwallet/daemon/pb"
+	"github.com/sedraxnet/sedrax/cmd/sedraxwallet/keys"
 	"github.com/sedraxnet/sedrax/domain/dagconfig"
 	"github.com/sedraxnet/sedrax/infrastructure/network/rpcclient"
 	"github.com/sedraxnet/sedrax/infrastructure/os/signal"
@@ -25,7 +25,7 @@ import (
 )
 
 type server struct {
-	pb.UnimplementedKaspawalletdServer
+	pb.UnimplementedsedraxwalletdServer
 
 	rpcClient *rpcclient.RPCClient
 	params    *dagconfig.Params
@@ -48,7 +48,7 @@ type server struct {
 // Currently, set to 100MB
 const MaxDaemonSendMsgSize = 100_000_000
 
-// Start starts the kaspawalletd server
+// Start starts the sedraxwalletd server
 func Start(params *dagconfig.Params, listen, rpcServer string, keysFilePath string, profile string, timeout uint32) error {
 	initLog(defaultLogFile, defaultErrLogFile)
 
@@ -106,7 +106,7 @@ func Start(params *dagconfig.Params, listen, rpcServer string, keysFilePath stri
 	})
 
 	grpcServer := grpc.NewServer(grpc.MaxSendMsgSize(MaxDaemonSendMsgSize))
-	pb.RegisterKaspawalletdServer(grpcServer, serverInstance)
+	pb.RegistersedraxwalletdServer(grpcServer, serverInstance)
 
 	spawn("grpcServer.Serve", func() {
 		err := grpcServer.Serve(listener)

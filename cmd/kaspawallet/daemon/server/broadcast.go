@@ -3,9 +3,9 @@ package server
 import (
 	"context"
 	"github.com/sedraxnet/sedrax/app/appmessage"
-	"github.com/sedraxnet/sedrax/cmd/kaspawallet/daemon/pb"
-	"github.com/sedraxnet/sedrax/cmd/kaspawallet/libkaspawallet"
-	"github.com/sedraxnet/sedrax/cmd/kaspawallet/libkaspawallet/serialization"
+	"github.com/sedraxnet/sedrax/cmd/sedraxwallet/daemon/pb"
+	"github.com/sedraxnet/sedrax/cmd/sedraxwallet/libsedraxwallet"
+	"github.com/sedraxnet/sedrax/cmd/sedraxwallet/libsedraxwallet/serialization"
 	"github.com/sedraxnet/sedrax/domain/consensus/model/externalapi"
 	"github.com/sedraxnet/sedrax/infrastructure/network/rpcclient"
 	"github.com/pkg/errors"
@@ -38,7 +38,7 @@ func (s *server) broadcast(transactions [][]byte, isDomain bool) ([]string, erro
 				return nil, err
 			}
 		} else if !isDomain { //default in proto3 is false
-			tx, err = libkaspawallet.ExtractTransaction(transaction, s.keysFile.ECDSA)
+			tx, err = libsedraxwallet.ExtractTransaction(transaction, s.keysFile.ECDSA)
 			if err != nil {
 				return nil, err
 			}

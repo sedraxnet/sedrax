@@ -4,8 +4,8 @@ import (
 	"context"
 
 	"github.com/sedraxnet/sedrax/app/appmessage"
-	"github.com/sedraxnet/sedrax/cmd/kaspawallet/daemon/pb"
-	"github.com/sedraxnet/sedrax/cmd/kaspawallet/libkaspawallet"
+	"github.com/sedraxnet/sedrax/cmd/sedraxwallet/daemon/pb"
+	"github.com/sedraxnet/sedrax/cmd/sedraxwallet/libsedraxwallet"
 	"github.com/sedraxnet/sedrax/util"
 )
 
@@ -46,7 +46,7 @@ func (s *server) selectExternalSpendableUTXOs(externalUTXOs *appmessage.GetUTXOs
 		if !isExternalUTXOSpendable(entry, daaScore, maturity) {
 			continue
 		}
-		selectedExternalUtxos = append(selectedExternalUtxos, libkaspawallet.AppMessageUTXOToKaspawalletdUTXO(entry))
+		selectedExternalUtxos = append(selectedExternalUtxos, libsedraxwallet.AppMessageUTXOTosedraxwalletdUTXO(entry))
 	}
 
 	return selectedExternalUtxos, nil

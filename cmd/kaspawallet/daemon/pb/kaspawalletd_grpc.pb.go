@@ -14,10 +14,10 @@ import (
 // Requires gRPC-Go v1.32.0 or later.
 const _ = grpc.SupportPackageIsVersion7
 
-// KaspawalletdClient is the client API for Kaspawalletd service.
+// sedraxwalletdClient is the client API for sedraxwalletd service.
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
-type KaspawalletdClient interface {
+type sedraxwalletdClient interface {
 	GetBalance(ctx context.Context, in *GetBalanceRequest, opts ...grpc.CallOption) (*GetBalanceResponse, error)
 	GetExternalSpendableUTXOs(ctx context.Context, in *GetExternalSpendableUTXOsRequest, opts ...grpc.CallOption) (*GetExternalSpendableUTXOsResponse, error)
 	CreateUnsignedTransactions(ctx context.Context, in *CreateUnsignedTransactionsRequest, opts ...grpc.CallOption) (*CreateUnsignedTransactionsResponse, error)
@@ -31,99 +31,99 @@ type KaspawalletdClient interface {
 	Sign(ctx context.Context, in *SignRequest, opts ...grpc.CallOption) (*SignResponse, error)
 }
 
-type kaspawalletdClient struct {
+type sedraxwalletdClient struct {
 	cc grpc.ClientConnInterface
 }
 
-func NewKaspawalletdClient(cc grpc.ClientConnInterface) KaspawalletdClient {
-	return &kaspawalletdClient{cc}
+func NewsedraxwalletdClient(cc grpc.ClientConnInterface) sedraxwalletdClient {
+	return &sedraxwalletdClient{cc}
 }
 
-func (c *kaspawalletdClient) GetBalance(ctx context.Context, in *GetBalanceRequest, opts ...grpc.CallOption) (*GetBalanceResponse, error) {
+func (c *sedraxwalletdClient) GetBalance(ctx context.Context, in *GetBalanceRequest, opts ...grpc.CallOption) (*GetBalanceResponse, error) {
 	out := new(GetBalanceResponse)
-	err := c.cc.Invoke(ctx, "/kaspawalletd.kaspawalletd/GetBalance", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/sedraxwalletd.sedraxwalletd/GetBalance", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *kaspawalletdClient) GetExternalSpendableUTXOs(ctx context.Context, in *GetExternalSpendableUTXOsRequest, opts ...grpc.CallOption) (*GetExternalSpendableUTXOsResponse, error) {
+func (c *sedraxwalletdClient) GetExternalSpendableUTXOs(ctx context.Context, in *GetExternalSpendableUTXOsRequest, opts ...grpc.CallOption) (*GetExternalSpendableUTXOsResponse, error) {
 	out := new(GetExternalSpendableUTXOsResponse)
-	err := c.cc.Invoke(ctx, "/kaspawalletd.kaspawalletd/GetExternalSpendableUTXOs", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/sedraxwalletd.sedraxwalletd/GetExternalSpendableUTXOs", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *kaspawalletdClient) CreateUnsignedTransactions(ctx context.Context, in *CreateUnsignedTransactionsRequest, opts ...grpc.CallOption) (*CreateUnsignedTransactionsResponse, error) {
+func (c *sedraxwalletdClient) CreateUnsignedTransactions(ctx context.Context, in *CreateUnsignedTransactionsRequest, opts ...grpc.CallOption) (*CreateUnsignedTransactionsResponse, error) {
 	out := new(CreateUnsignedTransactionsResponse)
-	err := c.cc.Invoke(ctx, "/kaspawalletd.kaspawalletd/CreateUnsignedTransactions", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/sedraxwalletd.sedraxwalletd/CreateUnsignedTransactions", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *kaspawalletdClient) ShowAddresses(ctx context.Context, in *ShowAddressesRequest, opts ...grpc.CallOption) (*ShowAddressesResponse, error) {
+func (c *sedraxwalletdClient) ShowAddresses(ctx context.Context, in *ShowAddressesRequest, opts ...grpc.CallOption) (*ShowAddressesResponse, error) {
 	out := new(ShowAddressesResponse)
-	err := c.cc.Invoke(ctx, "/kaspawalletd.kaspawalletd/ShowAddresses", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/sedraxwalletd.sedraxwalletd/ShowAddresses", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *kaspawalletdClient) NewAddress(ctx context.Context, in *NewAddressRequest, opts ...grpc.CallOption) (*NewAddressResponse, error) {
+func (c *sedraxwalletdClient) NewAddress(ctx context.Context, in *NewAddressRequest, opts ...grpc.CallOption) (*NewAddressResponse, error) {
 	out := new(NewAddressResponse)
-	err := c.cc.Invoke(ctx, "/kaspawalletd.kaspawalletd/NewAddress", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/sedraxwalletd.sedraxwalletd/NewAddress", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *kaspawalletdClient) Shutdown(ctx context.Context, in *ShutdownRequest, opts ...grpc.CallOption) (*ShutdownResponse, error) {
+func (c *sedraxwalletdClient) Shutdown(ctx context.Context, in *ShutdownRequest, opts ...grpc.CallOption) (*ShutdownResponse, error) {
 	out := new(ShutdownResponse)
-	err := c.cc.Invoke(ctx, "/kaspawalletd.kaspawalletd/Shutdown", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/sedraxwalletd.sedraxwalletd/Shutdown", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *kaspawalletdClient) Broadcast(ctx context.Context, in *BroadcastRequest, opts ...grpc.CallOption) (*BroadcastResponse, error) {
+func (c *sedraxwalletdClient) Broadcast(ctx context.Context, in *BroadcastRequest, opts ...grpc.CallOption) (*BroadcastResponse, error) {
 	out := new(BroadcastResponse)
-	err := c.cc.Invoke(ctx, "/kaspawalletd.kaspawalletd/Broadcast", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/sedraxwalletd.sedraxwalletd/Broadcast", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *kaspawalletdClient) Send(ctx context.Context, in *SendRequest, opts ...grpc.CallOption) (*SendResponse, error) {
+func (c *sedraxwalletdClient) Send(ctx context.Context, in *SendRequest, opts ...grpc.CallOption) (*SendResponse, error) {
 	out := new(SendResponse)
-	err := c.cc.Invoke(ctx, "/kaspawalletd.kaspawalletd/Send", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/sedraxwalletd.sedraxwalletd/Send", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *kaspawalletdClient) Sign(ctx context.Context, in *SignRequest, opts ...grpc.CallOption) (*SignResponse, error) {
+func (c *sedraxwalletdClient) Sign(ctx context.Context, in *SignRequest, opts ...grpc.CallOption) (*SignResponse, error) {
 	out := new(SignResponse)
-	err := c.cc.Invoke(ctx, "/kaspawalletd.kaspawalletd/Sign", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/sedraxwalletd.sedraxwalletd/Sign", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-// KaspawalletdServer is the server API for Kaspawalletd service.
-// All implementations must embed UnimplementedKaspawalletdServer
+// sedraxwalletdServer is the server API for sedraxwalletd service.
+// All implementations must embed UnimplementedsedraxwalletdServer
 // for forward compatibility
-type KaspawalletdServer interface {
+type sedraxwalletdServer interface {
 	GetBalance(context.Context, *GetBalanceRequest) (*GetBalanceResponse, error)
 	GetExternalSpendableUTXOs(context.Context, *GetExternalSpendableUTXOsRequest) (*GetExternalSpendableUTXOsResponse, error)
 	CreateUnsignedTransactions(context.Context, *CreateUnsignedTransactionsRequest) (*CreateUnsignedTransactionsResponse, error)
@@ -135,259 +135,259 @@ type KaspawalletdServer interface {
 	Send(context.Context, *SendRequest) (*SendResponse, error)
 	// Since SignRequest contains a password - this command should only be used on a trusted or secure connection
 	Sign(context.Context, *SignRequest) (*SignResponse, error)
-	mustEmbedUnimplementedKaspawalletdServer()
+	mustEmbedUnimplementedsedraxwalletdServer()
 }
 
-// UnimplementedKaspawalletdServer must be embedded to have forward compatible implementations.
-type UnimplementedKaspawalletdServer struct {
+// UnimplementedsedraxwalletdServer must be embedded to have forward compatible implementations.
+type UnimplementedsedraxwalletdServer struct {
 }
 
-func (UnimplementedKaspawalletdServer) GetBalance(context.Context, *GetBalanceRequest) (*GetBalanceResponse, error) {
+func (UnimplementedsedraxwalletdServer) GetBalance(context.Context, *GetBalanceRequest) (*GetBalanceResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetBalance not implemented")
 }
-func (UnimplementedKaspawalletdServer) GetExternalSpendableUTXOs(context.Context, *GetExternalSpendableUTXOsRequest) (*GetExternalSpendableUTXOsResponse, error) {
+func (UnimplementedsedraxwalletdServer) GetExternalSpendableUTXOs(context.Context, *GetExternalSpendableUTXOsRequest) (*GetExternalSpendableUTXOsResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetExternalSpendableUTXOs not implemented")
 }
-func (UnimplementedKaspawalletdServer) CreateUnsignedTransactions(context.Context, *CreateUnsignedTransactionsRequest) (*CreateUnsignedTransactionsResponse, error) {
+func (UnimplementedsedraxwalletdServer) CreateUnsignedTransactions(context.Context, *CreateUnsignedTransactionsRequest) (*CreateUnsignedTransactionsResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CreateUnsignedTransactions not implemented")
 }
-func (UnimplementedKaspawalletdServer) ShowAddresses(context.Context, *ShowAddressesRequest) (*ShowAddressesResponse, error) {
+func (UnimplementedsedraxwalletdServer) ShowAddresses(context.Context, *ShowAddressesRequest) (*ShowAddressesResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method ShowAddresses not implemented")
 }
-func (UnimplementedKaspawalletdServer) NewAddress(context.Context, *NewAddressRequest) (*NewAddressResponse, error) {
+func (UnimplementedsedraxwalletdServer) NewAddress(context.Context, *NewAddressRequest) (*NewAddressResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method NewAddress not implemented")
 }
-func (UnimplementedKaspawalletdServer) Shutdown(context.Context, *ShutdownRequest) (*ShutdownResponse, error) {
+func (UnimplementedsedraxwalletdServer) Shutdown(context.Context, *ShutdownRequest) (*ShutdownResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Shutdown not implemented")
 }
-func (UnimplementedKaspawalletdServer) Broadcast(context.Context, *BroadcastRequest) (*BroadcastResponse, error) {
+func (UnimplementedsedraxwalletdServer) Broadcast(context.Context, *BroadcastRequest) (*BroadcastResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Broadcast not implemented")
 }
-func (UnimplementedKaspawalletdServer) Send(context.Context, *SendRequest) (*SendResponse, error) {
+func (UnimplementedsedraxwalletdServer) Send(context.Context, *SendRequest) (*SendResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Send not implemented")
 }
-func (UnimplementedKaspawalletdServer) Sign(context.Context, *SignRequest) (*SignResponse, error) {
+func (UnimplementedsedraxwalletdServer) Sign(context.Context, *SignRequest) (*SignResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Sign not implemented")
 }
-func (UnimplementedKaspawalletdServer) mustEmbedUnimplementedKaspawalletdServer() {}
+func (UnimplementedsedraxwalletdServer) mustEmbedUnimplementedsedraxwalletdServer() {}
 
-// UnsafeKaspawalletdServer may be embedded to opt out of forward compatibility for this service.
-// Use of this interface is not recommended, as added methods to KaspawalletdServer will
+// UnsafesedraxwalletdServer may be embedded to opt out of forward compatibility for this service.
+// Use of this interface is not recommended, as added methods to sedraxwalletdServer will
 // result in compilation errors.
-type UnsafeKaspawalletdServer interface {
-	mustEmbedUnimplementedKaspawalletdServer()
+type UnsafesedraxwalletdServer interface {
+	mustEmbedUnimplementedsedraxwalletdServer()
 }
 
-func RegisterKaspawalletdServer(s grpc.ServiceRegistrar, srv KaspawalletdServer) {
-	s.RegisterService(&Kaspawalletd_ServiceDesc, srv)
+func RegistersedraxwalletdServer(s grpc.ServiceRegistrar, srv sedraxwalletdServer) {
+	s.RegisterService(&sedraxwalletd_ServiceDesc, srv)
 }
 
-func _Kaspawalletd_GetBalance_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _sedraxwalletd_GetBalance_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetBalanceRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(KaspawalletdServer).GetBalance(ctx, in)
+		return srv.(sedraxwalletdServer).GetBalance(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/kaspawalletd.kaspawalletd/GetBalance",
+		FullMethod: "/sedraxwalletd.sedraxwalletd/GetBalance",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(KaspawalletdServer).GetBalance(ctx, req.(*GetBalanceRequest))
+		return srv.(sedraxwalletdServer).GetBalance(ctx, req.(*GetBalanceRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Kaspawalletd_GetExternalSpendableUTXOs_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _sedraxwalletd_GetExternalSpendableUTXOs_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetExternalSpendableUTXOsRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(KaspawalletdServer).GetExternalSpendableUTXOs(ctx, in)
+		return srv.(sedraxwalletdServer).GetExternalSpendableUTXOs(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/kaspawalletd.kaspawalletd/GetExternalSpendableUTXOs",
+		FullMethod: "/sedraxwalletd.sedraxwalletd/GetExternalSpendableUTXOs",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(KaspawalletdServer).GetExternalSpendableUTXOs(ctx, req.(*GetExternalSpendableUTXOsRequest))
+		return srv.(sedraxwalletdServer).GetExternalSpendableUTXOs(ctx, req.(*GetExternalSpendableUTXOsRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Kaspawalletd_CreateUnsignedTransactions_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _sedraxwalletd_CreateUnsignedTransactions_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(CreateUnsignedTransactionsRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(KaspawalletdServer).CreateUnsignedTransactions(ctx, in)
+		return srv.(sedraxwalletdServer).CreateUnsignedTransactions(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/kaspawalletd.kaspawalletd/CreateUnsignedTransactions",
+		FullMethod: "/sedraxwalletd.sedraxwalletd/CreateUnsignedTransactions",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(KaspawalletdServer).CreateUnsignedTransactions(ctx, req.(*CreateUnsignedTransactionsRequest))
+		return srv.(sedraxwalletdServer).CreateUnsignedTransactions(ctx, req.(*CreateUnsignedTransactionsRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Kaspawalletd_ShowAddresses_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _sedraxwalletd_ShowAddresses_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(ShowAddressesRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(KaspawalletdServer).ShowAddresses(ctx, in)
+		return srv.(sedraxwalletdServer).ShowAddresses(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/kaspawalletd.kaspawalletd/ShowAddresses",
+		FullMethod: "/sedraxwalletd.sedraxwalletd/ShowAddresses",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(KaspawalletdServer).ShowAddresses(ctx, req.(*ShowAddressesRequest))
+		return srv.(sedraxwalletdServer).ShowAddresses(ctx, req.(*ShowAddressesRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Kaspawalletd_NewAddress_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _sedraxwalletd_NewAddress_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(NewAddressRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(KaspawalletdServer).NewAddress(ctx, in)
+		return srv.(sedraxwalletdServer).NewAddress(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/kaspawalletd.kaspawalletd/NewAddress",
+		FullMethod: "/sedraxwalletd.sedraxwalletd/NewAddress",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(KaspawalletdServer).NewAddress(ctx, req.(*NewAddressRequest))
+		return srv.(sedraxwalletdServer).NewAddress(ctx, req.(*NewAddressRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Kaspawalletd_Shutdown_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _sedraxwalletd_Shutdown_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(ShutdownRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(KaspawalletdServer).Shutdown(ctx, in)
+		return srv.(sedraxwalletdServer).Shutdown(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/kaspawalletd.kaspawalletd/Shutdown",
+		FullMethod: "/sedraxwalletd.sedraxwalletd/Shutdown",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(KaspawalletdServer).Shutdown(ctx, req.(*ShutdownRequest))
+		return srv.(sedraxwalletdServer).Shutdown(ctx, req.(*ShutdownRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Kaspawalletd_Broadcast_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _sedraxwalletd_Broadcast_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(BroadcastRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(KaspawalletdServer).Broadcast(ctx, in)
+		return srv.(sedraxwalletdServer).Broadcast(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/kaspawalletd.kaspawalletd/Broadcast",
+		FullMethod: "/sedraxwalletd.sedraxwalletd/Broadcast",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(KaspawalletdServer).Broadcast(ctx, req.(*BroadcastRequest))
+		return srv.(sedraxwalletdServer).Broadcast(ctx, req.(*BroadcastRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Kaspawalletd_Send_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _sedraxwalletd_Send_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(SendRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(KaspawalletdServer).Send(ctx, in)
+		return srv.(sedraxwalletdServer).Send(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/kaspawalletd.kaspawalletd/Send",
+		FullMethod: "/sedraxwalletd.sedraxwalletd/Send",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(KaspawalletdServer).Send(ctx, req.(*SendRequest))
+		return srv.(sedraxwalletdServer).Send(ctx, req.(*SendRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Kaspawalletd_Sign_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _sedraxwalletd_Sign_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(SignRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(KaspawalletdServer).Sign(ctx, in)
+		return srv.(sedraxwalletdServer).Sign(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/kaspawalletd.kaspawalletd/Sign",
+		FullMethod: "/sedraxwalletd.sedraxwalletd/Sign",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(KaspawalletdServer).Sign(ctx, req.(*SignRequest))
+		return srv.(sedraxwalletdServer).Sign(ctx, req.(*SignRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-// Kaspawalletd_ServiceDesc is the grpc.ServiceDesc for Kaspawalletd service.
+// sedraxwalletd_ServiceDesc is the grpc.ServiceDesc for sedraxwalletd service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
-var Kaspawalletd_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "kaspawalletd.kaspawalletd",
-	HandlerType: (*KaspawalletdServer)(nil),
+var sedraxwalletd_ServiceDesc = grpc.ServiceDesc{
+	ServiceName: "sedraxwalletd.sedraxwalletd",
+	HandlerType: (*sedraxwalletdServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
 			MethodName: "GetBalance",
-			Handler:    _Kaspawalletd_GetBalance_Handler,
+			Handler:    _sedraxwalletd_GetBalance_Handler,
 		},
 		{
 			MethodName: "GetExternalSpendableUTXOs",
-			Handler:    _Kaspawalletd_GetExternalSpendableUTXOs_Handler,
+			Handler:    _sedraxwalletd_GetExternalSpendableUTXOs_Handler,
 		},
 		{
 			MethodName: "CreateUnsignedTransactions",
-			Handler:    _Kaspawalletd_CreateUnsignedTransactions_Handler,
+			Handler:    _sedraxwalletd_CreateUnsignedTransactions_Handler,
 		},
 		{
 			MethodName: "ShowAddresses",
-			Handler:    _Kaspawalletd_ShowAddresses_Handler,
+			Handler:    _sedraxwalletd_ShowAddresses_Handler,
 		},
 		{
 			MethodName: "NewAddress",
-			Handler:    _Kaspawalletd_NewAddress_Handler,
+			Handler:    _sedraxwalletd_NewAddress_Handler,
 		},
 		{
 			MethodName: "Shutdown",
-			Handler:    _Kaspawalletd_Shutdown_Handler,
+			Handler:    _sedraxwalletd_Shutdown_Handler,
 		},
 		{
 			MethodName: "Broadcast",
-			Handler:    _Kaspawalletd_Broadcast_Handler,
+			Handler:    _sedraxwalletd_Broadcast_Handler,
 		},
 		{
 			MethodName: "Send",
-			Handler:    _Kaspawalletd_Send_Handler,
+			Handler:    _sedraxwalletd_Send_Handler,
 		},
 		{
 			MethodName: "Sign",
-			Handler:    _Kaspawalletd_Sign_Handler,
+			Handler:    _sedraxwalletd_Sign_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "kaspawalletd.proto",
+	Metadata: "sedraxwalletd.proto",
 }

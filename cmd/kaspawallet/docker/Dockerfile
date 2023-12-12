@@ -14,8 +14,8 @@ RUN go mod download
 
 COPY . .
 
-WORKDIR /go/src/github.com/sedraxnet/sedrax/cmd/kaspawallet
-RUN GOOS=linux go build -a -installsuffix cgo -o kaspawallet .
+WORKDIR /go/src/github.com/sedraxnet/sedrax/cmd/sedraxwallet
+RUN GOOS=linux go build -a -installsuffix cgo -o sedraxwallet .
 
 # --- multistage docker build: stage #2: runtime image
 FROM alpine
@@ -23,7 +23,7 @@ WORKDIR /app
 
 RUN apk add --no-cache ca-certificates tini
 
-COPY --from=build /go/src/github.com/sedraxnet/sedrax/cmd/kaspawallet/kaspawallet /app/
+COPY --from=build /go/src/github.com/sedraxnet/sedrax/cmd/sedraxwallet/sedraxwallet /app/
 
 USER nobody
 ENTRYPOINT [ "/sbin/tini", "--" ]

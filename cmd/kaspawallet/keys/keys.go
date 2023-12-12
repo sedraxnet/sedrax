@@ -12,7 +12,7 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/sedraxnet/sedrax/cmd/kaspawallet/utils"
+	"github.com/sedraxnet/sedrax/cmd/sedraxwallet/utils"
 
 	"github.com/sedraxnet/sedrax/domain/dagconfig"
 	"github.com/sedraxnet/sedrax/util"
@@ -22,7 +22,7 @@ import (
 )
 
 var (
-	defaultAppDir = util.AppDir("kaspawallet", false)
+	defaultAppDir = util.AppDir("sedraxwallet", false)
 )
 
 // LastVersion is the most up to date file format version

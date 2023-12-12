@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/sedraxnet/sedrax/cmd/kaspawallet/keys"
-	"github.com/sedraxnet/sedrax/cmd/kaspawallet/libkaspawallet"
-	"github.com/sedraxnet/sedrax/cmd/kaspawallet/utils"
+	"github.com/sedraxnet/sedrax/cmd/sedraxwallet/keys"
+	"github.com/sedraxnet/sedrax/cmd/sedraxwallet/libsedraxwallet"
+	"github.com/sedraxnet/sedrax/cmd/sedraxwallet/utils"
 
 	"github.com/pkg/errors"
 )
@@ -36,7 +36,7 @@ func dumpUnencryptedData(conf *dumpUnencryptedDataConfig) error {
 	mnemonicPublicKeys := make(map[string]struct{})
 	for i, mnemonic := range mnemonics {
 		fmt.Printf("Mnemonic #%d:\n%s\n\n", i+1, mnemonic)
-		publicKey, err := libkaspawallet.MasterPublicKeyFromMnemonic(conf.NetParams(), mnemonic, len(keysFile.ExtendedPublicKeys) > 1)
+		publicKey, err := libsedraxwallet.MasterPublicKeyFromMnemonic(conf.NetParams(), mnemonic, len(keysFile.ExtendedPublicKeys) > 1)
 		if err != nil {
 			return err
 		}

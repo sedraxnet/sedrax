@@ -1,19 +1,19 @@
-package libkaspawallet
+package libsedraxwallet
 
 import (
 	"encoding/hex"
 
 	"github.com/sedraxnet/sedrax/app/appmessage"
-	"github.com/sedraxnet/sedrax/cmd/kaspawallet/daemon/pb"
+	"github.com/sedraxnet/sedrax/cmd/sedraxwallet/daemon/pb"
 	"github.com/sedraxnet/sedrax/domain/consensus/model/externalapi"
 	"github.com/sedraxnet/sedrax/domain/consensus/utils/transactionid"
 	"github.com/sedraxnet/sedrax/domain/consensus/utils/utxo"
 )
 
-// KaspawalletdUTXOsTolibkaspawalletUTXOs converts a  []*pb.UtxosByAddressesEntry to a []*libkaspawallet.UTXO
-func KaspawalletdUTXOsTolibkaspawalletUTXOs(kaspawalletdUtxoEntires []*pb.UtxosByAddressesEntry) ([]*UTXO, error) {
-	UTXOs := make([]*UTXO, len(kaspawalletdUtxoEntires))
-	for i, entry := range kaspawalletdUtxoEntires {
+// sedraxwalletdUTXOsTolibsedraxwalletUTXOs converts a  []*pb.UtxosByAddressesEntry to a []*libsedraxwallet.UTXO
+func sedraxwalletdUTXOsTolibsedraxwalletUTXOs(sedraxwalletdUtxoEntires []*pb.UtxosByAddressesEntry) ([]*UTXO, error) {
+	UTXOs := make([]*UTXO, len(sedraxwalletdUtxoEntires))
+	for i, entry := range sedraxwalletdUtxoEntires {
 		script, err := hex.DecodeString(entry.UtxoEntry.ScriptPublicKey.ScriptPublicKey)
 		if err != nil {
 			return nil, err
@@ -41,8 +41,8 @@ func KaspawalletdUTXOsTolibkaspawalletUTXOs(kaspawalletdUtxoEntires []*pb.UtxosB
 	return UTXOs, nil
 }
 
-// AppMessageUTXOToKaspawalletdUTXO converts an appmessage.UTXOsByAddressesEntry to a  pb.UtxosByAddressesEntry
-func AppMessageUTXOToKaspawalletdUTXO(appUTXOsByAddressesEntry *appmessage.UTXOsByAddressesEntry) *pb.UtxosByAddressesEntry {
+// AppMessageUTXOTosedraxwalletdUTXO converts an appmessage.UTXOsByAddressesEntry to a  pb.UtxosByAddressesEntry
+func AppMessageUTXOTosedraxwalletdUTXO(appUTXOsByAddressesEntry *appmessage.UTXOsByAddressesEntry) *pb.UtxosByAddressesEntry {
 	return &pb.UtxosByAddressesEntry{
 		Outpoint: &pb.Outpoint{
 			TransactionId: appUTXOsByAddressesEntry.Outpoint.TransactionID,

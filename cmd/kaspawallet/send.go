@@ -6,10 +6,10 @@ import (
 	"os"
 	"strings"
 
-	"github.com/sedraxnet/sedrax/cmd/kaspawallet/daemon/client"
-	"github.com/sedraxnet/sedrax/cmd/kaspawallet/daemon/pb"
-	"github.com/sedraxnet/sedrax/cmd/kaspawallet/keys"
-	"github.com/sedraxnet/sedrax/cmd/kaspawallet/libkaspawallet"
+	"github.com/sedraxnet/sedrax/cmd/sedraxwallet/daemon/client"
+	"github.com/sedraxnet/sedrax/cmd/sedraxwallet/daemon/pb"
+	"github.com/sedraxnet/sedrax/cmd/sedraxwallet/keys"
+	"github.com/sedraxnet/sedrax/cmd/sedraxwallet/libsedraxwallet"
 	"github.com/sedraxnet/sedrax/domain/consensus/utils/constants"
 	"github.com/pkg/errors"
 )
@@ -64,7 +64,7 @@ func send(conf *sendConfig) error {
 
 	signedTransactions := make([][]byte, len(createUnsignedTransactionsResponse.UnsignedTransactions))
 	for i, unsignedTransaction := range createUnsignedTransactionsResponse.UnsignedTransactions {
-		signedTransaction, err := libkaspawallet.Sign(conf.NetParams(), mnemonics, unsignedTransaction, keysFile.ECDSA)
+		signedTransaction, err := libsedraxwallet.Sign(conf.NetParams(), mnemonics, unsignedTransaction, keysFile.ECDSA)
 		if err != nil {
 			return err
 		}

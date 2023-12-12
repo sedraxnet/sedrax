@@ -1,4 +1,4 @@
-package libkaspawallet
+package libsedraxwallet
 
 import (
 	"math"
@@ -6,7 +6,7 @@ import (
 	"strings"
 
 	"github.com/kaspanet/go-secp256k1"
-	"github.com/sedraxnet/sedrax/cmd/kaspawallet/libkaspawallet/bip32"
+	"github.com/sedraxnet/sedrax/cmd/sedraxwallet/libsedraxwallet/bip32"
 	"github.com/sedraxnet/sedrax/domain/dagconfig"
 	"github.com/sedraxnet/sedrax/util"
 	"github.com/pkg/errors"

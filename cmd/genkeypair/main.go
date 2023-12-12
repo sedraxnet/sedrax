@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/sedraxnet/sedrax/cmd/kaspawallet/libkaspawallet"
+	"github.com/sedraxnet/sedrax/cmd/sedraxwallet/libsedraxwallet"
 	"github.com/sedraxnet/sedrax/util"
 )
 
@@ -12,7 +12,7 @@ func main() {
 		panic(err)
 	}
 
-	privateKey, publicKey, err := libkaspawallet.CreateKeyPair(false)
+	privateKey, publicKey, err := libsedraxwallet.CreateKeyPair(false)
 	if err != nil {
 		panic(err)
 	}

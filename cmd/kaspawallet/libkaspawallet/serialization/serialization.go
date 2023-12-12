@@ -3,7 +3,7 @@ package serialization
 import (
 	"math"
 
-	"github.com/sedraxnet/sedrax/cmd/kaspawallet/libkaspawallet/serialization/protoserialization"
+	"github.com/sedraxnet/sedrax/cmd/sedraxwallet/libsedraxwallet/serialization/protoserialization"
 	"github.com/sedraxnet/sedrax/domain/consensus/model/externalapi"
 	"github.com/sedraxnet/sedrax/domain/consensus/utils/subnetworks"
 	"github.com/pkg/errors"

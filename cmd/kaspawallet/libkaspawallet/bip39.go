@@ -1,9 +1,9 @@
-package libkaspawallet
+package libsedraxwallet
 
 import (
 	"fmt"
 
-	"github.com/sedraxnet/sedrax/cmd/kaspawallet/libkaspawallet/bip32"
+	"github.com/sedraxnet/sedrax/cmd/sedraxwallet/libsedraxwallet/bip32"
 	"github.com/sedraxnet/sedrax/domain/dagconfig"
 	"github.com/pkg/errors"
 	"github.com/tyler-smith/go-bip39"

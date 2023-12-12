@@ -6,11 +6,11 @@ import (
 	"fmt"
 
 	"github.com/kaspanet/go-secp256k1"
-	"github.com/sedraxnet/sedrax/cmd/kaspawallet/daemon/client"
-	"github.com/sedraxnet/sedrax/cmd/kaspawallet/daemon/pb"
-	"github.com/sedraxnet/sedrax/cmd/kaspawallet/libkaspawallet"
-	"github.com/sedraxnet/sedrax/cmd/kaspawallet/libkaspawallet/serialization"
-	"github.com/sedraxnet/sedrax/cmd/kaspawallet/utils"
+	"github.com/sedraxnet/sedrax/cmd/sedraxwallet/daemon/client"
+	"github.com/sedraxnet/sedrax/cmd/sedraxwallet/daemon/pb"
+	"github.com/sedraxnet/sedrax/cmd/sedraxwallet/libsedraxwallet"
+	"github.com/sedraxnet/sedrax/cmd/sedraxwallet/libsedraxwallet/serialization"
+	"github.com/sedraxnet/sedrax/cmd/sedraxwallet/utils"
 	"github.com/sedraxnet/sedrax/domain/consensus/model/externalapi"
 	"github.com/sedraxnet/sedrax/domain/consensus/utils/consensushashing"
 	"github.com/sedraxnet/sedrax/domain/consensus/utils/constants"
@@ -33,7 +33,7 @@ func sweep(conf *sweepConfig) error {
 		return err
 	}
 
-	publicKeybytes, err := libkaspawallet.PublicKeyFromPrivateKey(privateKeyBytes)
+	publicKeybytes, err := libsedraxwallet.PublicKeyFromPrivateKey(privateKeyBytes)
 	if err != nil {
 		return err
 	}
@@ -64,7 +64,7 @@ func sweep(conf *sweepConfig) error {
 		return err
 	}
 
-	UTXOs, err := libkaspawallet.KaspawalletdUTXOsTolibkaspawalletUTXOs(getExternalSpendableUTXOsResponse.Entries)
+	UTXOs, err := libsedraxwallet.sedraxwalletdUTXOsTolibsedraxwalletUTXOs(getExternalSpendableUTXOsResponse.Entries)
 	if err != nil {
 		return err
 	}
@@ -140,7 +140,7 @@ func newDummyTransaction() *externalapi.DomainTransaction {
 
 func createSplitTransactionsWithSchnorrPrivteKey(
 	params *dagconfig.Params,
-	selectedUTXOs []*libkaspawallet.UTXO,
+	selectedUTXOs []*libsedraxwallet.UTXO,
 	toAddress util.Address,
 	feePerInput int) ([]*externalapi.DomainTransaction, error) {
 

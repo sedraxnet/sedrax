@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/sedraxnet/sedrax/cmd/kaspawallet/daemon/client"
-	"github.com/sedraxnet/sedrax/cmd/kaspawallet/daemon/pb"
+	"github.com/sedraxnet/sedrax/cmd/sedraxwallet/daemon/client"
+	"github.com/sedraxnet/sedrax/cmd/sedraxwallet/daemon/pb"
 	"github.com/sedraxnet/sedrax/domain/consensus/utils/constants"
 )
 

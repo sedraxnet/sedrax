@@ -3,7 +3,7 @@ package bip32
 import (
 	"encoding/binary"
 	"github.com/kaspanet/go-secp256k1"
-	"github.com/sedraxnet/sedrax/cmd/kaspawallet/libkaspawallet/bip32/base58"
+	"github.com/sedraxnet/sedrax/cmd/sedraxwallet/libsedraxwallet/bip32/base58"
 	"github.com/pkg/errors"
 )
 

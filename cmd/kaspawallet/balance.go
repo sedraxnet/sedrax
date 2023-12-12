@@ -4,9 +4,9 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/sedraxnet/sedrax/cmd/kaspawallet/daemon/client"
-	"github.com/sedraxnet/sedrax/cmd/kaspawallet/daemon/pb"
-	"github.com/sedraxnet/sedrax/cmd/kaspawallet/utils"
+	"github.com/sedraxnet/sedrax/cmd/sedraxwallet/daemon/client"
+	"github.com/sedraxnet/sedrax/cmd/sedraxwallet/daemon/pb"
+	"github.com/sedraxnet/sedrax/cmd/sedraxwallet/utils"
 )
 
 func balance(conf *balanceConfig) error {
