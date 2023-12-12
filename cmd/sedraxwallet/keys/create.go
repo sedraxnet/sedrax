@@ -19,7 +19,7 @@ func CreateMnemonics(params *dagconfig.Params, numKeys uint32, cmdLinePassword s
 	mnemonics := make([]string, numKeys)
 	for i := uint32(0); i < numKeys; i++ {
 		var err error
-		mnemonics[i], err = libsedraxwallet.CreateMnemonic()
+		mnemonics[i], err = libkaspawallet.CreateMnemonic()
 		if err != nil {
 			return nil, nil, err
 		}
@@ -65,7 +65,7 @@ func encryptedMnemonicExtendedPublicKeyPairs(params *dagconfig.Params, mnemonics
 	extendedPublicKeys = make([]string, 0, len(mnemonics))
 
 	for _, mnemonic := range mnemonics {
-		extendedPublicKey, err := libsedraxwallet.MasterPublicKeyFromMnemonic(params, mnemonic, isMultisig)
+		extendedPublicKey, err := libkaspawallet.MasterPublicKeyFromMnemonic(params, mnemonic, isMultisig)
 		if err != nil {
 			return nil, nil, err
 		}

@@ -71,17 +71,17 @@ func (s *server) createUnsignedTransactions(address string, amount uint64, isSen
 		return nil, err
 	}
 
-	payments := []*libsedraxwallet.Payment{{
+	payments := []*libkaspawallet.Payment{{
 		Address: toAddress,
 		Amount:  spendValue,
 	}}
 	if changeSompi > 0 {
-		payments = append(payments, &libsedraxwallet.Payment{
+		payments = append(payments, &libkaspawallet.Payment{
 			Address: changeAddress,
 			Amount:  changeSompi,
 		})
 	}
-	unsignedTransaction, err := libsedraxwallet.CreateUnsignedTransaction(s.keysFile.ExtendedPublicKeys,
+	unsignedTransaction, err := libkaspawallet.CreateUnsignedTransaction(s.keysFile.ExtendedPublicKeys,
 		s.keysFile.MinimumSignatures,
 		payments, selectedUTXOs)
 	if err != nil {
@@ -96,9 +96,9 @@ func (s *server) createUnsignedTransactions(address string, amount uint64, isSen
 }
 
 func (s *server) selectUTXOs(spendAmount uint64, isSendAll bool, feePerInput uint64, fromAddresses []*walletAddress) (
-	selectedUTXOs []*libsedraxwallet.UTXO, totalReceived uint64, changeSompi uint64, err error) {
+	selectedUTXOs []*libkaspawallet.UTXO, totalReceived uint64, changeSompi uint64, err error) {
 
-	selectedUTXOs = []*libsedraxwallet.UTXO{}
+	selectedUTXOs = []*libkaspawallet.UTXO{}
 	totalValue := uint64(0)
 
 	dagInfo, err := s.rpcClient.GetBlockDAGInfo()
@@ -120,7 +120,7 @@ func (s *server) selectUTXOs(spendAmount uint64, isSendAll bool, feePerInput uin
 			}
 		}
 
-		selectedUTXOs = append(selectedUTXOs, &libsedraxwallet.UTXO{
+		selectedUTXOs = append(selectedUTXOs, &libkaspawallet.UTXO{
 			Outpoint:       utxo.Outpoint,
 			UTXOEntry:      utxo.UTXOEntry,
 			DerivationPath: s.walletAddressPath(utxo.address),

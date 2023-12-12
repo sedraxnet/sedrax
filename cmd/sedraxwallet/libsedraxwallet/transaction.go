@@ -1,4 +1,4 @@
-package libsedraxwallet
+package libkaspawallet
 
 import (
 	"github.com/sedraxnet/sedrax/cmd/sedraxwallet/libsedraxwallet/bip32"

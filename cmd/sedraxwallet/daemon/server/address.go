@@ -33,12 +33,12 @@ func (s *server) changeAddress(useExisting bool, fromAddresses []*walletAddress)
 		walletAddr = &walletAddress{
 			index:         internalIndex,
 			cosignerIndex: s.keysFile.CosignerIndex,
-			keyChain:      libsedraxwallet.InternalKeychain,
+			keyChain:      libkaspawallet.InternalKeychain,
 		}
 	}
 
 	path := s.walletAddressPath(walletAddr)
-	address, err := libsedraxwallet.Address(s.params, s.keysFile.ExtendedPublicKeys, s.keysFile.MinimumSignatures, path, s.keysFile.ECDSA)
+	address, err := libkaspawallet.Address(s.params, s.keysFile.ExtendedPublicKeys, s.keysFile.MinimumSignatures, path, s.keysFile.ECDSA)
 	if err != nil {
 		return nil, nil, err
 	}
@@ -58,10 +58,10 @@ func (s *server) ShowAddresses(_ context.Context, request *pb.ShowAddressesReque
 		walletAddr := &walletAddress{
 			index:         i,
 			cosignerIndex: s.keysFile.CosignerIndex,
-			keyChain:      libsedraxwallet.ExternalKeychain,
+			keyChain:      libkaspawallet.ExternalKeychain,
 		}
 		path := s.walletAddressPath(walletAddr)
-		address, err := libsedraxwallet.Address(s.params, s.keysFile.ExtendedPublicKeys, s.keysFile.MinimumSignatures, path, s.keysFile.ECDSA)
+		address, err := libkaspawallet.Address(s.params, s.keysFile.ExtendedPublicKeys, s.keysFile.MinimumSignatures, path, s.keysFile.ECDSA)
 		if err != nil {
 			return nil, err
 		}
@@ -92,10 +92,10 @@ func (s *server) NewAddress(_ context.Context, request *pb.NewAddressRequest) (*
 	walletAddr := &walletAddress{
 		index:         s.keysFile.LastUsedExternalIndex(),
 		cosignerIndex: s.keysFile.CosignerIndex,
-		keyChain:      libsedraxwallet.ExternalKeychain,
+		keyChain:      libkaspawallet.ExternalKeychain,
 	}
 	path := s.walletAddressPath(walletAddr)
-	address, err := libsedraxwallet.Address(s.params, s.keysFile.ExtendedPublicKeys, s.keysFile.MinimumSignatures, path, s.keysFile.ECDSA)
+	address, err := libkaspawallet.Address(s.params, s.keysFile.ExtendedPublicKeys, s.keysFile.MinimumSignatures, path, s.keysFile.ECDSA)
 	if err != nil {
 		return nil, err
 	}
@@ -105,7 +105,7 @@ func (s *server) NewAddress(_ context.Context, request *pb.NewAddressRequest) (*
 
 func (s *server) walletAddressString(wAddr *walletAddress) (string, error) {
 	path := s.walletAddressPath(wAddr)
-	addr, err := libsedraxwallet.Address(s.params, s.keysFile.ExtendedPublicKeys, s.keysFile.MinimumSignatures, path, s.keysFile.ECDSA)
+	addr, err := libkaspawallet.Address(s.params, s.keysFile.ExtendedPublicKeys, s.keysFile.MinimumSignatures, path, s.keysFile.ECDSA)
 	if err != nil {
 		return "", err
 	}

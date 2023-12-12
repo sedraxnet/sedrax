@@ -1,4 +1,4 @@
-package libsedraxwallet
+package libkaspawallet
 
 import (
 	"fmt"

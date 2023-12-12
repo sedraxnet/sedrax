@@ -58,7 +58,7 @@ func create(conf *createConfig) error {
 	// For a read only wallet the cosigner index is 0
 	cosignerIndex := uint32(0)
 	if len(signerExtendedPublicKeys) > 0 {
-		cosignerIndex, err = libsedraxwallet.MinimumCosignerIndex(signerExtendedPublicKeys, extendedPublicKeys)
+		cosignerIndex, err = libkaspawallet.MinimumCosignerIndex(signerExtendedPublicKeys, extendedPublicKeys)
 		if err != nil {
 			return err
 		}

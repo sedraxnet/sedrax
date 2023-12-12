@@ -1,9 +1,9 @@
 syntax = "proto3";
 
 option go_package = "github.com/sedraxnet/sedrax/cmd/sedraxwallet/daemon/pb";
-package sedraxwalletd;
+package kaspawalletd;
 
-service sedraxwalletd {
+service kaspawalletd {
   rpc GetBalance (GetBalanceRequest) returns (GetBalanceResponse) {}
   rpc GetExternalSpendableUTXOs (GetExternalSpendableUTXOsRequest) returns (GetExternalSpendableUTXOsResponse) {}
   rpc CreateUnsignedTransactions (CreateUnsignedTransactionsRequest) returns (CreateUnsignedTransactionsResponse) {}

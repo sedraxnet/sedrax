@@ -11,8 +11,8 @@ import (
 	"google.golang.org/grpc"
 )
 
-// Connect connects to the sedraxwalletd server, and returns the client instance
-func Connect(address string) (pb.sedraxwalletdClient, func(), error) {
+// Connect connects to the kaspawalletd server, and returns the client instance
+func Connect(address string) (pb.KaspawalletdClient, func(), error) {
 	// Connection is local, so 1 second timeout is sufficient
 	ctx, cancel := context.WithTimeout(context.Background(), time.Second)
 	defer cancel()
@@ -25,7 +25,7 @@ func Connect(address string) (pb.sedraxwalletdClient, func(), error) {
 		return nil, nil, err
 	}
 
-	return pb.NewsedraxwalletdClient(conn), func() {
+	return pb.NewKaspawalletdClient(conn), func() {
 		conn.Close()
 	}, nil
 }

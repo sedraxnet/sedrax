@@ -33,7 +33,7 @@ func sweep(conf *sweepConfig) error {
 		return err
 	}
 
-	publicKeybytes, err := libsedraxwallet.PublicKeyFromPrivateKey(privateKeyBytes)
+	publicKeybytes, err := libkaspawallet.PublicKeyFromPrivateKey(privateKeyBytes)
 	if err != nil {
 		return err
 	}
@@ -64,7 +64,7 @@ func sweep(conf *sweepConfig) error {
 		return err
 	}
 
-	UTXOs, err := libsedraxwallet.sedraxwalletdUTXOsTolibsedraxwalletUTXOs(getExternalSpendableUTXOsResponse.Entries)
+	UTXOs, err := libkaspawallet.KaspawalletdUTXOsTolibkaspawalletUTXOs(getExternalSpendableUTXOsResponse.Entries)
 	if err != nil {
 		return err
 	}
@@ -140,7 +140,7 @@ func newDummyTransaction() *externalapi.DomainTransaction {
 
 func createSplitTransactionsWithSchnorrPrivteKey(
 	params *dagconfig.Params,
-	selectedUTXOs []*libsedraxwallet.UTXO,
+	selectedUTXOs []*libkaspawallet.UTXO,
 	toAddress util.Address,
 	feePerInput int) ([]*externalapi.DomainTransaction, error) {
 
