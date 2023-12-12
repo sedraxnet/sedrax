@@ -8,7 +8,7 @@ import (
 	"time"
 
 	"github.com/sedraxnet/sedrax/app/appmessage"
-	"github.com/sedraxnet/sedrax/cmd/kaspaminer/templatemanager"
+	"github.com/sedraxnet/sedrax/cmd/sedraxminer/templatemanager"
 	"github.com/sedraxnet/sedrax/domain/consensus/model/externalapi"
 	"github.com/sedraxnet/sedrax/domain/consensus/utils/consensushashing"
 	"github.com/sedraxnet/sedrax/domain/consensus/utils/pow"
@@ -188,7 +188,7 @@ func getBlockForMining(mineWhenNotSynced bool) (*externalapi.DomainBlock, *pow.S
 
 func templatesLoop(client *minerClient, miningAddr util.Address, errChan chan error) {
 	getBlockTemplate := func() {
-		template, err := client.GetBlockTemplate(miningAddr.String(), "kaspaminer-"+version.Version())
+		template, err := client.GetBlockTemplate(miningAddr.String(), "sedraxminer-"+version.Version())
 		if nativeerrors.Is(err, router.ErrTimeout) {
 			log.Warnf("Got timeout while requesting block template from %s: %s", client.Address(), err)
 			reconnectErr := client.Reconnect()

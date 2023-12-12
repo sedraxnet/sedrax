@@ -14,8 +14,8 @@ RUN go mod download
 
 COPY . .
 
-WORKDIR /go/src/github.com/sedraxnet/sedrax/cmd/kaspaminer
-RUN GOOS=linux go build -a -installsuffix cgo -o kaspaminer .
+WORKDIR /go/src/github.com/sedraxnet/sedrax/cmd/sedraxminer
+RUN GOOS=linux go build -a -installsuffix cgo -o sedraxminer .
 
 # --- multistage docker build: stage #2: runtime image
 FROM alpine
@@ -23,7 +23,7 @@ WORKDIR /app
 
 RUN apk add --no-cache ca-certificates tini
 
-COPY --from=build /go/src/github.com/sedraxnet/sedrax/cmd/kaspaminer/kaspaminer /app/
+COPY --from=build /go/src/github.com/sedraxnet/sedrax/cmd/sedraxminer/sedraxminer /app/
 
 USER nobody
 ENTRYPOINT [ "/sbin/tini", "--" ]

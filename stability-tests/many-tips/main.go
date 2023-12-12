@@ -227,7 +227,7 @@ func mineLoopUntilHavingOnlyOneTipInDAG(rpcClient *rpc.Client, miningAddress uti
 	numOfBlocksBeforeMining := dagInfo.BlockCount
 
 	kaspaMinerCmd, err := common.StartCmd("MINER",
-		"kaspaminer",
+		"sedraxminer",
 		common.NetworkCliArgumentFromNetParams(activeConfig().NetParams()),
 		"-s", rpcAddress,
 		"--mine-when-not-synced",

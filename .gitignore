@@ -22,7 +22,7 @@ kaspad.db
 kaspad
 cmd/gencerts/gencerts
 cmd/sedraxctl/sedraxctl
-cmd/kasminer/kaspaminer
+cmd/kasminer/sedraxminer
 *.exe
 *.exe~
 

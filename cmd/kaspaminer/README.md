@@ -1,4 +1,4 @@
-# kaspaminer
+# sedraxminer
 
 Kaspaminer is a CPU-based miner for kaspad
 
@@ -23,7 +23,7 @@ $ go version
 
 ```bash
 $ git clone https://github.com/sedraxnet/sedrax
-$ cd kaspad/cmd/kaspaminer
+$ cd kaspad/cmd/sedraxminer
 $ go install .
 ```
 
@@ -33,13 +33,13 @@ $ go install .
   
 ## Usage
 
-The full kaspaminer configuration options can be seen with:
+The full sedraxminer configuration options can be seen with:
 
 ```bash
-$ kaspaminer --help
+$ sedraxminer --help
 ```
 
 But the minimum configuration needed to run it is:
 ```bash
-$ kaspaminer --miningaddr=<YOUR_MINING_ADDRESS>
+$ sedraxminer --miningaddr=<YOUR_MINING_ADDRESS>
 ```
